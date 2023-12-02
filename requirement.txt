@@ -1,0 +1,13 @@
+python Libray
+Opencv
+
+installing command -
+pip install opencv-python
+
+
+Decimal Code for Configurations
+0.6310238838195801
+0.29583048820495605
+0.5307943820953369
+0.531022310256958
+0.32808566093444824
