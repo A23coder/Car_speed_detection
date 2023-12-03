@@ -2,7 +2,7 @@ from config.conf import CalSpeed
 import cv2
 import time
 
-cascade_src = 'cars.xml'
+cascade_src = ('cars.xml')
 video_src = 'video3.MP4'
 # line a
 ax1 = 70
@@ -30,7 +30,7 @@ i = 1
 start_time = time.time()
 # video ....
 cap = cv2.VideoCapture(video_src)
-car_cascade = cv2.CascadeClassifier(cascade_src)
+car_cascade= cv2.CascadeClassifier(cascade_src)
 
 while True:
     ret, img = cap.read()
@@ -59,6 +59,7 @@ while True:
                 cv2.line(img, (bx1, by), (bx2, by), (0, 255, 0), 2)
                 Speed = CalSpeed()
                 print("Car Number " + str(i) + " Speed: " + str(Speed))
+                
                 i = i + 1
                 cv2.putText(img, "Speed: " + str(Speed) + "KM/H", (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0),
                             3);
