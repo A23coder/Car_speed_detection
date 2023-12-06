@@ -3,7 +3,7 @@ import cv2
 import time
 from fpdf import FPDF
 
-cascade_src = ('cars.xml')
+cascade_src = 'cars.xml'
 video_src = 'video3.MP4'
 # line a
 ax1 = 70
@@ -33,7 +33,7 @@ i = 1
 start_time = time.time()
 # video ....
 cap = cv2.VideoCapture(video_src)
-car_cascade= cv2.CascadeClassifier(cascade_src)
+car_cascade = cv2.CascadeClassifier(cascade_src)
 
 while True:
     ret, img = cap.read()
@@ -63,7 +63,10 @@ while True:
                 Speed = CalSpeed()
                 txt="Car Number " + str(i) + " Speed: " + str(Speed)
                 print("Car Number " + str(i) + " Speed: " + str(Speed))
+<<<<<<< HEAD
                 pdf.cell(10,10,txt,0,1)
+=======
+>>>>>>> parent of 3a1cf47 (Improvmet needed)
                 i = i + 1
                 cv2.putText(img, "Speed: " + str(Speed) + "KM/H", (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0),
                             3);
