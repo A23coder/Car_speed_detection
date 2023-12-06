@@ -63,13 +63,10 @@ while True:
                 Speed = CalSpeed()
                 txt="Car Number " + str(i) + " Speed: " + str(Speed)
                 print("Car Number " + str(i) + " Speed: " + str(Speed))
-<<<<<<< HEAD
                 pdf.cell(10,10,txt,0,1)
-=======
->>>>>>> parent of 3a1cf47 (Improvmet needed)
+                pdf.cell(10,10,txt,0,1)
                 i = i + 1
-                cv2.putText(img, "Speed: " + str(Speed) + "KM/H", (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0),
-                            3);
+                cv2.putText(img, "Speed: " + str(Speed) + "KM/H", (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0),3)
                 break
             else:
                 cv2.putText(img, "Calcuting", (100, 200), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 3)
