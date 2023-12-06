@@ -1,6 +1,7 @@
 from config.conf import CalSpeed
 import cv2
 import time
+from fpdf import FPDF
 
 cascade_src = ('cars.xml')
 video_src = 'video3.MP4'
@@ -12,7 +13,9 @@ ax2 = 230
 bx1 = 15
 by = 125
 bx2 = 225
-
+pdf=FPDF()
+pdf.add_page()
+pdf.set_font("Arial",size=16)
 
 def Speed_Calc(time):
     # Here i converted m to Km and second to hour then divison to reach Speed in this form (KM/H)
@@ -58,8 +61,9 @@ while True:
             if int(by) <= int((y + y + h) / 2) & int(by + 10) >= int((y + y + h) / 2):
                 cv2.line(img, (bx1, by), (bx2, by), (0, 255, 0), 2)
                 Speed = CalSpeed()
+                txt="Car Number " + str(i) + " Speed: " + str(Speed)
                 print("Car Number " + str(i) + " Speed: " + str(Speed))
-                
+                pdf.cell(10,10,txt,0,1)
                 i = i + 1
                 cv2.putText(img, "Speed: " + str(Speed) + "KM/H", (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0),
                             3);
@@ -74,3 +78,4 @@ while True:
         break
 cap.release()
 cv2.destroyAllWindows()
+pdf.output('mypdf.pdf')
