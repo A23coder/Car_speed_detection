@@ -1,6 +1,8 @@
 from config.conf import CalSpeed
 import cv2
 import time
+import datetime
+import pytz
 from fpdf import FPDF
 
 cascade_src = 'cars.xml'
@@ -26,8 +28,8 @@ def Speed_Calc(time):
         return Speed
     except ZeroDivisionError:
         print(5)
-
-
+today="Today`s date = "+datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
+pdf.cell(10,10,str(today),0,1)
 # car num
 i = 1
 start_time = time.time()
