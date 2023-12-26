@@ -4,6 +4,9 @@ Opencv
 installing command -
 pip install opencv-python
 
+for pdf report generate
+pip install fpdf
+
 
 Decimal Code for Configurations
 0.6310238838195801

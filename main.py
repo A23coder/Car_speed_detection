@@ -66,7 +66,7 @@ while True:
                 txt="Car Number " + str(i) + " Speed: " + str(Speed)
                 print("Car Number " + str(i) + " Speed: " + str(Speed))
                 pdf.cell(10,10,txt,0,1)
-                pdf.cell(10,10,txt,0,1)
+                # pdf.cell(10,10,txt,0,1)
                 i = i + 1
                 cv2.putText(img, "Speed: " + str(Speed) + "KM/H", (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0),3)
                 break
