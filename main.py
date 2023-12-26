@@ -28,7 +28,7 @@ def Speed_Calc(time):
         return Speed
     except ZeroDivisionError:
         print(5)
-today="Today`s date = "+datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
+today="Today`s date = "+str(datetime.datetime.now(pytz.timezone('Asia/Kolkata')))
 pdf.cell(10,10,str(today),0,1)
 # car num
 i = 1
