@@ -73,11 +73,10 @@ while True:
             else:
                 cv2.putText(img, "Calcuting", (100, 200), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 3)
                 break
-
     cv2.imshow('video', img)
 
     if cv2.waitKey(27) & 0xFF == ord('q'):
         break
 cap.release()
 cv2.destroyAllWindows()
-pdf.output('mypdf.pdf')
+pdf.output('report.pdf')
